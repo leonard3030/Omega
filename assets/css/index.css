@@ -9,55 +9,83 @@ body{
     background-image: linear-gradient(#044166, #006cae);
     background-attachment: fixed;
     background-size: cover;
+    width: 100vw;
+    overflow-x: hidden;
 }
 a,button{
     transition: 0.3s ease-in;
 }
-.nav-container{
-    background-color: #044166;
-    box-shadow: 5px 4px 20px 8px  #01314e;
-}
-.nav-container nav ul{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    list-style: none;
-    width: 96vw;
-}
-.nav-container nav ul .middle{
-    display: flex;
-}
-.nav-container nav ul .middle li{
-    display: block;
-}
-.nav-container nav ul .nav-brand{
-    padding: 20px 30px;
-    color: rgb(6, 228, 217);
-    font-weight: 600;
-    font-size: 30px;
-    text-decoration: none;
-}
-.nav-container nav ul .middle li a{
-    padding: 20px 30px;
-    display: block;
-    text-decoration: none;
-    color: rgb(6, 228, 217);
-    border-bottom: 3px #044166 solid;
-    font-weight: 550;
-}
-.nav-container nav ul .middle li a:hover{
-    border-bottom: 3px rgb(6, 228, 217) solid;
-    transition: 0.4s ease-in;
-}
-.nav-container nav ul li .talk{
+
+
+
+    .navbar-header{
+            padding: 10px;
+            display: grid;
+            grid-template-columns: 30% 70%;
+            grid-gap: 1%;
+            align-items: center;
+            background: #044166;
+            border-bottom: 3px #044166 solid;
+            height: auto;
+            box-shadow: 5px 4px 20px 8px  #01314e;
+        }
+        .navbar-header h2{
+            color: #06e4d9;
+        }
+        .nav-bars{
+            border: 1px white solid;
+            padding: 0.25rem;
+            background-color: #044166;
+            align-self: center;
+            cursor: pointer;
+            display: none;
+        }
+        .bar1,.bar2,.bar3{
+            background-color: whitesmoke;
+            height: 3px;
+            transition: all 1s ease;
+            width: 30px;
+            margin: 0.25rem;
+        }
+        .nav-item{
+            display: inline-block;
+            text-decoration: none;
+            color: #06e4d9;
+            padding: 1rem 1rem;
+            margin-left: 5%;
+            border-bottom: 2px #044166 solid;
+            transition: 0.3s ease;
+        }
+        .nav-item:hover{
+            border-bottom: 2px #06e4d9 solid;
+            /* padding-left: 1.5rem; */
+        }
+        .change .bar1{
+            rotate: -45deg;
+            translate: 0px 7px;
+        }
+        .change .bar2{
+            opacity: 0;
+        }
+        .change .bar3{
+            rotate: 45deg;
+            translate: 0px -6px;
+        }
+        .navbar{
+            position: absolute;
+            width: 100%;
+            top: 0;
+        }
+
+
+.talk{
     padding: 10px 25px;
-    display: block;
     text-decoration: none;
     color: rgb(6, 228, 217);
     font-weight: 550;
     border: 1px rgb(6, 228, 217) solid;
 }
-.nav-container nav ul li .talk:hover{
+.talk:hover{
     background-color:  rgb(6, 228, 217);
     color: #044166;
     transition: 0.4s ease-in;
@@ -70,6 +98,7 @@ a,button{
 }
 .port-container{
     width: 80vw;
+    margin-top: 4vh;
     background-color: white;
     box-shadow: 5px 4px 20px 8px  #01314e;
     height: auto;
@@ -79,11 +108,13 @@ a,button{
     grid-template-columns: 50% 50%;
 }
 .img-widget{
-    width: 50%;
+    display: flex;
+    justify-content: center;
+    /*border-radius: 50%;*/
 }
 .img-widget img{
-    width: 500px;
-    width: 500px;
+    width: 100%;
+    height:auto;
     border-radius: 50%;
     object-fit: cover;
 }
@@ -110,12 +141,16 @@ a,button{
     font-size: 40px;
     font-weight: 300;
 }
-.my-desc{
+.my-desc,.my-dec{
     margin-top: 10px;
     font-size: 16px;
     font-weight: 400;
     line-height: 2;
     color: rgb(75, 74, 74);
+}
+.my-dec{
+    display: grid;
+    grid-template-columns: 40% 60%;
 }
 .my-works{
     padding: 15px 30px;
@@ -123,7 +158,7 @@ a,button{
     display: inline-block;
     text-decoration: none;
     color: #044166;
-    font-weight: 400;
+    font-weight: 500;
     margin-top: 20px;
 }
 .my-works:hover{
@@ -132,7 +167,134 @@ a,button{
     display: inline-block;
     text-decoration: none;
     color: white;
-    font-weight: 500;
     margin-top: 20px;
     background-color: #044166;
+}
+@media screen and (max-width: 700px){
+    .port-container{
+        width: 80vw;
+        background-color: white;
+        box-shadow: 5px 4px 20px 8px  #01314e;
+        height: auto;
+        padding: 20px;
+        border-radius: 20px;
+        display: grid;
+        grid-template-columns: 100%;
+    }
+}
+@media screen and (max-width: 1200px){
+    .my-dec{
+        display: flex;
+        flex-direction: column;
+    }
+    .navbar-header{
+        grid-template-columns: 15% 85%;
+    }
+}
+@media screen and (max-width: 1085px){
+    .info-widget .my-name{
+        line-height: 1.5;
+        font-size: 25px;
+    }
+    .my-grade{
+        line-height: 1.5;
+        font-size: 25px;
+    }
+    .my-desc, .my-dec {
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 760px){
+    .nav-links{
+                height: 0;
+                overflow: hidden;
+            }
+            .collapse{
+                height: 267px;
+            }
+            .nav-item{
+                display: block;
+                text-decoration: none;
+                padding: 1rem 1rem;
+                transition: all 1s ease;
+                margin: 0;
+            }
+            .nav-item:hover{
+                background-color: #035180;
+                border-bottom: 2px #035180 solid;
+            }
+            .nav-bars{
+                display: block;
+            }
+            
+        .nav-links{
+            background-color: #044166;
+            transition: all 1s ease;
+            overflow: hidden;
+            position: absolute;
+            top: 60px;
+            left: 0;
+            width: 100%;
+        }
+        .navbar-header{
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 3px #044166 solid;
+            height: auto;
+        }
+        .talk:hover{
+            color: #06e4d9;
+        }
+}
+
+
+
+
+
+.about-section{
+    background-color: #fffff7;
+    padding: 5rem;
+    line-height: 2;
+}
+.about-widget{
+    display: grid;
+    grid-template-columns: 45% 50%;
+    grid-gap: 5%;
+}
+.about-left,.about-right{
+    display: grid;
+    grid-template-columns: 30% 5% 40%;
+}
+.about-left{
+    border-right: 1px #0248734f solid;
+}
+.items-left, .items-dots,.items-ans{
+    color: #044166;
+    font-weight: 600;
+    font-size: 18px;
+}
+.items-ans{
+    color: black;
+    font-weight: 300;
+}
+
+
+
+
+
+
+
+.footer-section{
+    background-color: #fffff7;
+    padding: 2rem;
+    line-height: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    bottom: 0;
+}
+.footer-section b{
+    color: #044166;
 }
