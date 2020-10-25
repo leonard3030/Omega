@@ -108,9 +108,9 @@
         <div class="about-widget">
             <div class="about-left">
                 <div class="items-left">
-                    <p><label class="term">Full Name</label></p>
-                    <p><label class="term">Phone</label></p>
-                    <p><label class="term">Email</label></p>
+                    <p><label class="term">Full&nbsp;Name&nbsp;&nbsp;</label></p>
+                    <p><label class="term">Phone </label></p>
+                    <p><label class="term">Email </label></p>
                 </div>
                 <div class="items-dots">
                     <p><label class="term">:</label></p>
@@ -125,9 +125,9 @@
             </div>
             <div class="about-right">
                 <div class="items-left">
-                    <p><label class="term">Citizenship</label></p>
-                    <p><label class="term">Maritual Status</label></p>
-                    <p><label class="term">Address</label></p>
+                    <p><label class="term">Citizenship </label></p>
+                    <p><label class="term">Status </label></p>
+                    <p><label class="term">Address </label></p>
                 </div>
                 <div class="items-dots">
                     <p><label class="term">:</label></p>

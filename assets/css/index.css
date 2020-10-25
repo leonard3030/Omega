@@ -170,18 +170,59 @@ a,button{
     margin-top: 20px;
     background-color: #044166;
 }
-@media screen and (max-width: 700px){
-    .port-container{
-        width: 80vw;
-        background-color: white;
-        box-shadow: 5px 4px 20px 8px  #01314e;
-        height: auto;
-        padding: 20px;
-        border-radius: 20px;
-        display: grid;
-        grid-template-columns: 100%;
-    }
+
+
+
+.about-section{
+    background-color: #fffff7;
+    padding: 5rem;
+    line-height: 2;
 }
+.about-widget{
+    display: grid;
+    grid-template-columns: 45% 50%;
+    grid-gap: 5%;
+}
+.about-left,.about-right{
+    display: flex;
+}
+.about-left{
+    border-right: 1px #0248734f solid;
+}
+.items-left, .items-dots,.items-ans{
+    margin-left: 20px;
+    color: #044166;
+    font-weight: 600;
+    font-size: 18px;
+}
+.items-left{
+    width: 30%;
+}
+.items-ans{
+    color: black;
+    font-weight: 300;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media screen and (max-width: 1200px){
     .my-dec{
         display: flex;
@@ -192,6 +233,16 @@ a,button{
     }
 }
 @media screen and (max-width: 1085px){
+    .about-widget{
+        grid-template-columns: 100%;
+        grid-gap: 5%;
+    }
+    .about-left{
+        border: none;
+        border-bottom: 1px #0248734f solid;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+    }
     .info-widget .my-name{
         line-height: 1.5;
         font-size: 25px;
@@ -248,36 +299,33 @@ a,button{
         }
 }
 
+@media screen and (max-width: 700px){
+    .port-container{
+        width: 80vw;
+        background-color: white;
+        box-shadow: 5px 4px 20px 8px  #01314e;
+        height: auto;
+        padding: 20px;
+        border-radius: 20px;
+        display: grid;
+        grid-template-columns: 100%;
+    }
+    .items-left, .items-dots,.items-ans{
+        margin-left: 0px;
+        font-size: 14px;
+    }
+    .about-section{
+        background-color: #fffff7;
+        padding: 3rem;
+        line-height: 2;
+    }
+    
+    .items-left{
+        width: 50%;
+    }
+}
 
 
-
-
-.about-section{
-    background-color: #fffff7;
-    padding: 5rem;
-    line-height: 2;
-}
-.about-widget{
-    display: grid;
-    grid-template-columns: 45% 50%;
-    grid-gap: 5%;
-}
-.about-left,.about-right{
-    display: grid;
-    grid-template-columns: 30% 5% 40%;
-}
-.about-left{
-    border-right: 1px #0248734f solid;
-}
-.items-left, .items-dots,.items-ans{
-    color: #044166;
-    font-weight: 600;
-    font-size: 18px;
-}
-.items-ans{
-    color: black;
-    font-weight: 300;
-}
 
 
 
